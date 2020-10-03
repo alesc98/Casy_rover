@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+    <node pkg="supervisor_package" type="follow_wall" name="follow_wall" />
+    <node pkg="supervisor_package" type="straight_on_line" name="straight_on_line" />
+    <node pkg="supervisor_package" type="rover_movement_manager" name="rover_movement_manager" />
+   <node pkg="supervisor_package" type="mission_supervisor" name="mission_supervisor" output="screen" />
+</launch>

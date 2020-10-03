@@ -1,0 +1,138 @@
+<?xml version="1.0"?> 
+<sdf version="1.4">
+  <world name="default">
+<!-- moving sky-->
+<!--
+    <gui>
+      <camera name="developer_camera">
+        <pose>42.116497 1.626615 7.857857 0 0.254009 -3.113798</pose>
+      </camera>
+    </gui>
+    <scene>
+      <sky>
+        <clouds>
+          <speed>12</speed>
+        </clouds>
+      </sky>
+    </scene>
+-->
+    <!-- Ground Plane -->
+<!--    <include>
+      <uri>model://custom_ground</uri>
+    </include>
+-->
+    <!-- A ground plane -->
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+    <!-- sun -->
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    <population name="orchard">
+      <model name="cylinder">
+        <include>
+          <static>true</static>
+          <uri>model://cylinder</uri>
+        </include>
+      </model>
+      <pose>0 0 0 0 0 0</pose>
+      <distribution>
+        <type>grid</type>
+        <rows>4</rows>
+        <cols>4</cols>
+        <step>8 8 0</step>
+      </distribution>
+    </population>
+
+
+
+<population name="orchard">
+      <model name="apple_tree">
+        <include>
+          <static>true</static>
+          <uri>model://apple_tree</uri>
+        </include>
+      </model>
+      <pose>0 0 0 0 0 0</pose>
+      <distribution>
+        <type>grid</type>
+        <rows>4</rows>
+        <cols>4</cols>
+        <step>8 8 0</step>
+      </distribution>
+    </population>
+    
+
+<!-- orchard ground and surrounding grass -->
+
+ <!--   <include>
+      <uri>model://orchard_ground</uri>
+    </include>-->
+
+<!-- inclusion of house 1 -->
+    <include>
+      <uri>model://house_1</uri>
+	<pose> 0 -30 0 0 0 0 </pose>
+    </include>
+<!-- inclusion of warehouse  -->
+    <include>
+      <uri>model://warehouse</uri>
+	<pose> 22 -27 0 0 0 0 </pose>
+    </include>
+<!-- to introduce walls on two sides around the orchard -->
+
+
+    <include>
+      <uri>model://orchard_wall</uri>
+      <name>wall1</name>
+      <pose>-1 19 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model://orchard_wall1</uri>
+      <name>wall2</name>
+      <pose>-20 -3 0 0 0 1.57</pose>
+    </include>
+    <include>
+      <uri>model://orchard_wall3</uri>
+      <name>wall3</name>
+      <pose>-0.5 -40 0 0 0 0</pose>
+    </include>
+    <include>
+    <uri>model://orchard_wall4</uri>
+      <name>wall4</name>
+      <pose>18 6 0 0 0 1.57</pose>
+    </include>
+    <include>
+    <uri>model://orchard_wall5</uri>
+      <name>wall5</name>
+      <pose>29 -7 0 0 0 0</pose>
+    </include>
+    <include>
+    <uri>model://orchard_wall6</uri>
+      <name>wall6</name>
+      <pose>40 -19 0 0 0 1.57</pose>
+    </include>
+    <include>
+    <uri>model://orchard_wall7</uri>
+      <name>wall7</name>
+      <pose>27 -31 0 0 0 0</pose>
+    </include>
+    <include>
+    <uri>model://orchard_wall8</uri>
+      <name>wall8</name>
+      <pose>14 -35.5 0 0 0 1.57</pose>
+    </include>
+    <include>
+    <uri>model://orchard_wall9</uri>
+      <name>wall9</name>
+      <pose>-15 -32.5 0 0 0 1.57</pose>
+    </include>
+    <include>
+    <uri>model://orchard_wall10</uri>
+      <name>wall10</name>
+      <pose>-17.5 -25 0 0 0 0</pose>
+    </include>
+
+  </world>
+</sdf>
